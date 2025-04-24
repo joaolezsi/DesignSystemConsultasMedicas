@@ -1,0 +1,19 @@
+## Diretrizes do Banco de Dados
+
+1. Convenções de Nomenclatura
+1.1 Tabelas
+Use snake_case para os nomes das tabelas e colunas.
+
+Exemplo: usuarios, consultas, id_medico, id_paciente.
+
+1.2 Relacionamentos
+Utilize chaves estrangeiras (FOREIGN KEY) para garantir a integridade referencial.
+
+2. Regras de Negócio na Camada de Persistência
+2.1 Validação de Consultas
+Agendamento de consulta: Não permitir agendamento em horários já ocupados.
+
+Status da consulta: A consulta pode ter os status agendada, concluida ou cancelada.
+
+2.2 Segurança
+Garantir o controle de acesso e perfis (paciente, médico, administrador).
