@@ -9,7 +9,7 @@
 
 #### Light Mode
 
-![Identidade Visual Light Mode](./identidade-visual-light-mode.png)
+![Identidade Visual Light Mode](./docs/identidade-visual-light-mode.png)
 
 | Nome          | Código HEX | Uso Principal                        |
 | ------------- | ----------- | ------------------------------------ |
@@ -22,7 +22,7 @@
 
 #### Dark Mode
 
-![Identidade Visual Dark Mode](./identidade-visual-dark-mode.png)
+![Identidade Visual Dark Mode](./docs/identidade-visual-dark-mode.png)
 
 | Nome             | Código HEX | Uso Principal                        |
 | ---------------- | ----------- | ------------------------------------ |
