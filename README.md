@@ -1,6 +1,64 @@
-# DesignSystemConsultasMedicas
+## 🏗️ Arquitetura e Governança
 
-# 🎨 Style Guide - PucMed
+### Estilo Arquitetural
+
+O estilo arquitetural escolhido foi o **monolito** e o padrão arquitetural adotado foi o de **camadas**.  
+A aplicação de um estilo monolítico combinado com o padrão em camadas é vantajosa para um projeto de **pequeno porte**.
+
+Como o sistema de **gestão de consultas médicas** possui funcionalidades bem definidas, uma arquitetura monolítica centraliza todos os componentes, **facilitando o desenvolvimento, testes e implantação**.
+
+### Padrão em Camadas
+
+Ao adotar o padrão arquitetural em camadas, com as camadas de:
+
+- **Apresentação**
+- **Lógica de Negócios**
+- **Dados**
+
+o sistema obtém uma **estrutura organizada**, com **separação clara de responsabilidades**.  
+Isso torna o código mais **legível**, facilita **manutenções** e **ampliações**, permitindo que mudanças em uma parte do sistema **não impactem diretamente outras**.
+
+Essa abordagem foi escolhida levando em consideração que o projeto é de **pequeno porte** e **sem previsão de integração com outras ferramentas**.  
+Dessa forma, oferece **simplicidade**, **baixo custo inicial** e **eficiência** para um projeto que **não requer a complexidade** de arquiteturas distribuídas.
+
+---
+
+### Governança do Projeto
+
+A governança será realizada utilizando os recursos do **GitHub**, por meio de:
+
+- **Commits**
+- **Pull Requests**
+- **Issues**
+
+Cada nova funcionalidade, correção ou melhoria será desenvolvida em uma **branch separada** e, ao ser concluída, submetida via **Pull Request**.
+
+Esse processo permite:
+
+- Acompanhar quem fez cada alteração
+- Revisar o código antes da integração ao projeto principal
+- Manter um **histórico organizado** de todas as implementações
+- Garantir que o **Design System** será respeitado durante todo o desenvolvimento
+
+---
+
+### Gestão de Tarefas
+
+A separação e acompanhamento das tarefas será feita na aba **Projects**, utilizando o **quadro Kanban**, com as colunas:
+
+- **A Fazer**
+- **Em Progresso**
+- **Concluído**
+
+Cada tarefa pode ser representada por uma **issue**, atribuída a membros da equipe, contendo **prazos** e **descrições**.  
+Essa organização facilita:
+
+- O planejamento
+- A priorização das entregas
+- A colaboração entre os participantes do projeto
+
+
+# 🎨 Style Guide 
 
 #### Light Mode
 
