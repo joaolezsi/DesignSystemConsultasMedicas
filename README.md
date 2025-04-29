@@ -58,6 +58,23 @@ Essa organização facilita:
 - A colaboração entre os participantes do projeto
 
 ---
+## Stack e Comunicação
+
+- *Front-end: Desenvolvido com **React.js* e estilizado com *CSS Modules* que são bem estabelecidos no mercado e garantem modularidade e manutenção simplificada.
+- *Back-end: Implementado com **Node.js* e *Express* que fornece estrutura para criar APIs e servidores web, permitindo tratamento de rotas, requisições HTTP e integração com bancos de dados de forma organizada. 
+- *Comunicação: Realizada por meio de uma **API RESTful, com dados em formato **JSON*, RESTful segue convenções amplamente aceitas, o que torna a comunicação entre o front-end e o back-end simples e previsível. Permitindo também o controle de acesso por meio de autenticação, como o JWT.
+
+## Segurança
+
+- *Autenticação: Utiliza **JWT (JSON Web Tokens)* para proteger rotas e identificar usuários de forma segura. Esta forma de autenticação é ideal para ser utilizada em conjunto com APIs REST.
+- *Armazenamento de senhas: Senhas são armazenadas com **hashing* utilizando *bcrypt*, protegendo contra vazamentos de dados. O bcrypt gera um valor aleatório para cada senha automaticamente antes de aplicar o hash. Isso impede ataques com tabelas pré-calculadas, pois até senhas iguais terão hashes diferentes.
+
+## Características do Projeto
+- *Baixo acoplamento*: Por conta da escolha do padrão arquitetural em camadas e da stack, o projeto apresentará baixo acoplamento entre as camadas e os componentes principais, mesmo sendo uma aplicação monolítica. Porém se a aplicação crescer muito, o estilo monolítico pode tornar o acoplamento mais evidente.
+- *Escalabilidade*: Por conta da escolha do padrão arquitetural em camadas e da stack, a escalabilidade do projeto será simples até certo ponto. Mas embora a arquitetura monolítica seja mais simples no início, ela possui seus limites e pode se tornar difícil de manter e escalar à medida que o sistema cresce. Com o tempo, o monolito pode se tornar complexo e difícil de gerenciar, especialmente em termos de testes e atualizações de funcionalidades. Em um monólito, se uma parte crítica do sistema começar a falhar ou precisar de manutenção, isso pode afetar o sistema inteiro, mesmo sendo separado em camadas.
+- *Escolha da stack: A combinação de tecnologias foi selecionada por ser **simples, **consolidada no mercado* e de *fácil aprendizado*, adequada ao objetivo do projeto.
+
+---
 # 🎨 Style Guide 
 
 #### Light Mode
