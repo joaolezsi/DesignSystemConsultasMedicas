@@ -186,3 +186,16 @@ As cores principais da marca (**verde `#007E85`** e **vermelho `#EE0202`**) **n�
 - O suporte nativo a **Light/Dark Mode** respeita preferências do sistema operacional do usuário, promovendo conforto visual.
 
 ---
+
+## Banco de Dados
+
+![Diagrama](./docs/diagrama.png)
+
+O MySQL é uma boa escolha pelos seguintes aspectos:
+
+1.  *Maturidade e Confiabilidade:* São sistemas de gerenciamento de banco de dados relacionais (RDBMS) open-source estabelecidos, com um longo histórico de uso em produção e conhecidos pela sua estabilidade.
+2.  *Popularidade e Comunidade:* Possuem uma vasta comunidade de usuários, o que significa ampla documentação, tutoriais, fóruns de suporte e profissionais qualificados disponíveis.
+3.  *Custo:* Sendo open-source, geralmente não implicam custos de licenciamento, o que pode ser vantajoso para muitos projetos.
+4.  *Performance:* Oferecem bom desempenho para uma grande variedade de aplicações, especialmente aplicações web e sistemas transacionais, com muitas opções de otimização (como indexação).
+5.  *Ecossistema:* São compatíveis com a maioria das linguagens de programação, frameworks e ferramentas de desenvolvimento e administração.
+6.  *Funcionalidades:* Suportam o padrão SQL, transações ACID (com engines como InnoDB), replicação, particionamento e outros recursos essenciais para aplicações robustas.
