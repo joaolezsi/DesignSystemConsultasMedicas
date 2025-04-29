@@ -57,7 +57,7 @@ Essa organização facilita:
 - A priorização das entregas
 - A colaboração entre os participantes do projeto
 
-
+---
 # 🎨 Style Guide 
 
 #### Light Mode
