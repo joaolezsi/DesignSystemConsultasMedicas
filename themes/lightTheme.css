@@ -1,1 +1,8 @@
-:root { --primary: #2A9D8F; --background: #FFFFFF; }
+:root[data-theme="light"] {
+    --primary: #007E85;
+    --background: #FFFFFF;
+    --card-background: #FFFFFF;
+    --text-primary: #000000;
+    --text-secondary: #1C1B1F;
+    --border-color: #C3C3C3;
+  }

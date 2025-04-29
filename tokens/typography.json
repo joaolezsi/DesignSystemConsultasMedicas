@@ -1,1 +1,5 @@
-{ "fontFamily": "Arial, sans-serif", "fontSizeBase": "16px" }
+{
+    "fontFamily": "Poppins, sans-serif",
+    "fontSizeBase": "16px"
+  }
+  

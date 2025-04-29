@@ -6,3 +6,7 @@ export default {
 };
 
 export const Primario = () => <Button variant="primary">Entrar</Button>;
+
+export const Secundario = () => <Button variant="secondary">Cancelar</Button>;
+
+export const Perigo = () => <Button variant="danger">Excluir</Button>;
