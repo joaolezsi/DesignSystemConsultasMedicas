@@ -1,11 +1,6 @@
 # DesignSystemConsultasMedicas
 
-
-
-
 # 🎨 Style Guide - PucMed
-
-### Paleta de Cores
 
 #### Light Mode
 
@@ -36,7 +31,7 @@
 
 ---
 
-##  Tipografia
+## Tipografia
 
 | Tipo     | Fonte Principal | Peso     | Uso                            |
 | -------- | ---------------- | -------- | ------------------------------ |
@@ -111,3 +106,25 @@ A troca entre temas deve ajustar:
 
 As cores principais da marca (**verde `#007E85`** e **vermelho `#EE0202`**) **não mudam** entre Light e Dark Mode para manter a identidade visual consistente.
 
+---
+
+# Decisões de Acessibilidade e Boas Práticas de Design
+
+## Contraste e Visibilidade
+- As cores foram escolhidas para manter **alto contraste** entre texto, botões e fundo, em ambos os modos (claro e escuro), atendendo os critérios da **WCAG 2.1**.
+- Isso garante a leitura confortável para pessoas com baixa visão, daltonismo ou em ambientes com iluminação variada.
+
+## Consistência Visual
+- A **manutenção das cores principais** entre os modos assegura que usuários associem rapidamente ações importantes (como confirmações e erros).
+- Ícones e textos seguem o mesmo princípio de contraste para manter a compreensão mesmo sem dependência de cor isoladamente (bom para usuários com deficiências de percepção de cor).
+
+## Área clicável 
+- Botões e campos de input têm **tamanho mínimo adequado** para toque (mínimo 44px recomendado pelo Google), facilitando o uso em dispositivos móveis.
+
+## Tipografia
+- Fonte **Poppins** foi escolhida por sua ótima legibilidade e variações de peso (Bold, SemiBold, Regular), possibilitando diferenciação clara entre títulos, botões e descrições.
+
+## Adaptação de Tema
+- O suporte nativo a **Light/Dark Mode** respeita preferências do sistema operacional do usuário, promovendo conforto visual.
+
+---
