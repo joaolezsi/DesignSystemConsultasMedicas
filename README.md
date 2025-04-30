@@ -211,6 +211,18 @@ As cores principais da marca (**verde `#007E85`** e **vermelho `#EE0202`**) **n�
 O MySQL é uma boa escolha pelos seguintes aspectos:
 
 1.  *Maturidade e Confiabilidade:* São sistemas de gerenciamento de banco de dados relacionais (RDBMS) open-source estabelecidos, com um longo histórico de uso em produção e conhecidos pela sua estabilidade.
+
+
+
+# Integrantes 
+- Augusto Fuscaldi Cerezo
+- Wanessa Dias
+- João L.
+- Leandra Costa Ramos
+- Isabelle 
+- Lucas de Carvalho Barbosa
+- Isabelle Cristine Lucas
+
 2.  *Popularidade e Comunidade:* Possuem uma vasta comunidade de usuários, o que significa ampla documentação, tutoriais, fóruns de suporte e profissionais qualificados disponíveis.
 3.  *Custo:* Sendo open-source, geralmente não implicam custos de licenciamento, o que pode ser vantajoso para muitos projetos.
 4.  *Performance:* Oferecem bom desempenho para uma grande variedade de aplicações, especialmente aplicações web e sistemas transacionais, com muitas opções de otimização (como indexação).
