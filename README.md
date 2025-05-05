@@ -215,13 +215,16 @@ O MySQL é uma boa escolha pelos seguintes aspectos:
 
 
 # Integrantes 
+- Alexandre Breedveld
 - Augusto Fuscaldi Cerezo
-- Wanessa Dias
-- João L.
-- Leandra Costa Ramos
-- Isabelle 
-- Lucas de Carvalho Barbosa
 - Isabelle Cristine Lucas
+- Leandra Costa Ramos
+- Lucas de Carvalho Barbosa
+- João L.
+- Wanessa Dias
+
+
+
 
 2.  *Popularidade e Comunidade:* Possuem uma vasta comunidade de usuários, o que significa ampla documentação, tutoriais, fóruns de suporte e profissionais qualificados disponíveis.
 3.  *Custo:* Sendo open-source, geralmente não implicam custos de licenciamento, o que pode ser vantajoso para muitos projetos.
