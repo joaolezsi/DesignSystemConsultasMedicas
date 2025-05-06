@@ -1,3 +1,13 @@
+# Integrantes 
+- Alexandre Breedveld
+- Augusto Fuscaldi Cerezo
+- Isabelle Cristine Lucas
+- Leandra Costa Ramos
+- Lucas de Carvalho Barbosa
+- João L.
+- Wanessa Dias
+
+
 ## 🏗️ Arquitetura e Governança
 
 ### Estilo Arquitetural
@@ -67,7 +77,7 @@ Essa organização facilita:
 ## Segurança
 
 - *Autenticação: Utiliza **JWT (JSON Web Tokens)* para proteger rotas e identificar usuários de forma segura. Esta forma de autenticação é ideal para ser utilizada em conjunto com APIs REST.
-- *Armazenamento de senhas: Senhas são armazenadas com **hashing* utilizando *bcrypt*, protegendo contra vazamentos de dados. O bcrypt gera um valor aleatório para cada senha automaticamente antes de aplicar o hash. Isso impede ataques com tabelas pré-calculadas, pois até senhas iguais terão hashes diferentes.
+- *Armazenamento de senhas: Senhas são armazenadas com **hashing** utilizando **bcrypt**, protegendo contra vazamentos de dados. O bcrypt gera um valor aleatório para cada senha automaticamente antes de aplicar o hash. Isso impede ataques com tabelas pré-calculadas, pois até senhas iguais terão hashes diferentes.
 
 ## Características do Projeto
 - *Baixo acoplamento*: Por conta da escolha do padrão arquitetural em camadas e da stack, o projeto apresentará baixo acoplamento entre as camadas e os componentes principais, mesmo sendo uma aplicação monolítica. Porém se a aplicação crescer muito, o estilo monolítico pode tornar o acoplamento mais evidente.
@@ -211,23 +221,69 @@ As cores principais da marca (**verde `#007E85`** e **vermelho `#EE0202`**) **n�
 O MySQL é uma boa escolha pelos seguintes aspectos:
 
 1.  *Maturidade e Confiabilidade:* São sistemas de gerenciamento de banco de dados relacionais (RDBMS) open-source estabelecidos, com um longo histórico de uso em produção e conhecidos pela sua estabilidade.
-
-
-
-# Integrantes 
-- Alexandre Breedveld
-- Augusto Fuscaldi Cerezo
-- Isabelle Cristine Lucas
-- Leandra Costa Ramos
-- Lucas de Carvalho Barbosa
-- João L.
-- Wanessa Dias
-
-
-
-
 2.  *Popularidade e Comunidade:* Possuem uma vasta comunidade de usuários, o que significa ampla documentação, tutoriais, fóruns de suporte e profissionais qualificados disponíveis.
 3.  *Custo:* Sendo open-source, geralmente não implicam custos de licenciamento, o que pode ser vantajoso para muitos projetos.
 4.  *Performance:* Oferecem bom desempenho para uma grande variedade de aplicações, especialmente aplicações web e sistemas transacionais, com muitas opções de otimização (como indexação).
 5.  *Ecossistema:* São compatíveis com a maioria das linguagens de programação, frameworks e ferramentas de desenvolvimento e administração.
 6.  *Funcionalidades:* Suportam o padrão SQL, transações ACID (com engines como InnoDB), replicação, particionamento e outros recursos essenciais para aplicações robustas.
+7.  *Segurança:* Autenticação baseada em usuários e permissões granulares (GRANT, REVOKE). SSL/TLS para conexões criptografadas. Suporte a plugins de autenticação externa (como LDAP ou PAM). Suporte a roles (funções) (a partir da versão 8). Auditoria (disponível com plugins).
+
+ ### Diretrizes do Banco de Dados
+
+- **1. Convenções de Nomenclatura**
+
+- **Tabelas e Colunas**
+
+    - Usar underscore "_" para os nomes das tabelas e colunas. (Exemplo: usuarios, consultas, id_medico, id_paciente.)
+
+- **2. Relacionamentos**
+  
+    - Utilize chaves estrangeiras (FOREIGN KEY) para garantir a integridade referencial e para representar generalizações.
+
+- **3. Regras de Negócio na Camada de Persistência**
+  
+  - 3.1 Validação de Consultas
+
+    Agendamento de consulta: Não aceitar horários inválidos. Não permitir agendamento em horários já ocupados.
+
+    Status da consulta: A consulta pode ter os status agendada, concluida ou cancelada.
+
+  - 3.2 Validação de usuário
+  
+    Email: Não permitir o cadastro de emails inválidos ou inexistentes. 
+
+- **4. Segurança**
+
+    - Garantir o controle de acesso e perfis (paciente, médico, administrador).
+
+    - Garantir a criptografia robusta de senhas e dados sensíveis.
+  
+
+## Prefixos Padrões para Nomes de Colunas em Banco de Dados
+
+| Tipo de Dado         | Prefixo Sugerido | Exemplo              | Descrição                                     |
+|----------------------|------------------|----------------------|-----------------------------------------------|
+| ID principal         | `id_`            | `id_usuario`         | Identificador único da entidade               |
+| Chave estrangeira    | `fk_`            | `fk_endereco`        | Referência a outra tabela                     |
+| Nome                 | `nm_`            | `nm_cliente`         | Nome próprio ou descritivo                    |
+| Descrição            | `ds_`            | `ds_produto`         | Texto descritivo                              |
+| Email                | `em_`            | `em_contato`         | Endereço de e-mail                            |
+| Telefone             | `tel_`           | `tel_residencial`    | Número de telefone                            |
+| Endereço             | `end_`           | `end_logradouro`     | Componentes de endereço                       |
+| Quantidade           | `qnt_`           | `qnt_estoque`         | Quantidade de itens ou registros             |
+| Valor monetário      | `vl_`            | `vl_total`           | Valores financeiros ou monetários             |
+| Número genérico      | `nr_`            | `nr_documento`       | Números em geral (ex: CPF, RG, matrícula)     |
+| Data                 | `dt_`            | `dt_nascimento`      | Qualquer valor do tipo data                   |
+| Hora                 | `hr_`            | `hr_agendamento`     | Hora específica                               |
+| Timestamp            | `ts_`            | `ts_criacao`         | Data e hora completas (com segundos/miliseg.) |
+| Indicador booleano   | `fl_`            | `fl_ativo`           | Flag (0/1, true/false)                        |
+| URL / Caminho        | `url_`           | `url_foto_perfil`   | Endereço de arquivo, imagem, etc.              |
+| Nome de arquivo      | `arq_`           | `arq_documento`      | Nome do arquivo ou mídia                      |
+
+## Observações, limitações e pontos fracos a se levar em consideração:
+
+| Item                              | Situação no MySQL                                     | Melhorias implementáveis                                                                                                  |
+|-----------------------------------|-------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
+| Criptografia em repouso (at rest) | Só disponível nativamente no MySQL Enterprise         | Possível investimento monetário no MySQL Enterprise.                                                                      |
+| Auditoria detalhada               | Não nativo                                            | Audit Plugins de terceiros. Ex: McAfee Audit Plugin Registra comandos SQL, logins, alterações de dados.                   |
+| Controle de acesso por linha      | Não nativo                                            | Pode ser feita com views e triggers que são acessadas pela aplicação ao invés das tabelas diretamente.                    |
