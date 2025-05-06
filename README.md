@@ -15,7 +15,7 @@
 O estilo arquitetural escolhido foi o **monolito** e o padrão arquitetural adotado foi o de **camadas**.  
 A aplicação de um estilo monolítico combinado com o padrão em camadas é vantajosa para um projeto de **pequeno porte**.
 
-Como o sistema de **gestão de consultas médicas** possui funcionalidades bem definidas, uma arquitetura monolítica centraliza todos os componentes, **facilitando o desenvolvimento, testes e implantação**.
+Como o sistema de **gestão de consultas médicas** possui funcionalidades bem definidas e compactas, uma arquitetura monolítica centraliza todos os componentes, **facilitando o desenvolvimento, testes e implantação**.
 
 ### Padrão em Camadas
 
