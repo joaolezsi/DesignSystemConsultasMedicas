@@ -4,7 +4,7 @@
 - Isabelle Cristine Lucas
 - Leandra Costa Ramos
 - Lucas de Carvalho Barbosa
-- João L.
+- João Pedro Lezsi Fernandes
 - Wanessa Dias
 - Filipe Faria Melo
 
@@ -16,7 +16,7 @@
 O estilo arquitetural escolhido foi o **monolito** e o padrão arquitetural adotado foi o de **camadas**.  
 A aplicação de um estilo monolítico combinado com o padrão em camadas é vantajosa para um projeto de **pequeno porte**.
 
-Como o sistema de **gestão de consultas médicas** possui funcionalidades bem definidas e compactas, uma arquitetura monolítica centraliza todos os componentes, **facilitando o desenvolvimento, testes e implantação**.
+Como o sistema de **gestão de consultas médicas** possui funcionalidades bem definidas e compactas, uma arquitetura monolítica centraliza todos os componentes, **facilitando o desenvolvimento, testes e implantação**. Além de ser menos complexo visando manutenções futuras e sustentabilidade do sistema.
 
 ### Padrão em Camadas
 
@@ -69,22 +69,34 @@ Essa organização facilita:
 - A colaboração entre os participantes do projeto
 
 ---
+
 ## Stack e Comunicação
 
 - Front-end: Desenvolvido com **React.js** e estilizado com **CSS Modules** que são bem estabelecidos no mercado e garantem modularidade e manutenção simplificada.
-- Back-end: Implementado com **Node.js** e **Express** que fornece estrutura para criar APIs e servidores web, permitindo tratamento de rotas, requisições HTTP e integração com bancos de dados de forma organizada. 
-- Comunicação: Realizada por meio de **API RESTful**, com dados em formato **JSON**, RESTful segue convenções amplamente aceitas, o que torna a comunicação entre o front-end e o back-end simples e previsível. Permitindo também o controle de acesso por meio de autenticação, como o JWT.
+
+### Back-end
+
+O sistema foi desenvolvido com **Java** utilizando o framework **Spring Boot**, que simplifica bastante a criação de aplicações web e APIs REST. O Spring Boot traz várias configurações prontas, o que permite focar mais na lógica de negócio do que em detalhes de infraestrutura. Ele também facilita o controle das rotas, o tratamento de requisições HTTP e a integração com bancos de dados, mantendo o código limpo e bem organizado.
+
+### Comunicação
+
+A comunicação entre o front-end e o back-end é feita por meio de uma **API REST**, com os dados trafegando no formato **JSON**. Esse padrão é amplamente utilizado e bem aceito, o que facilita tanto o desenvolvimento quanto a manutenção. Além disso, o uso de REST permite implementar mecanismos de segurança, como autenticação via JWT, de forma eficiente e padronizada.
+
+---
 
 ## Segurança
 
-- Autenticação: Utiliza **JWT (JSON Web Tokens)** para proteger rotas e identificar usuários de forma segura. Esta forma de autenticação é ideal para ser utilizada em conjunto com APIs REST.
-- Armazenamento de senhas: Senhas são armazenadas com **hashing** utilizando **bcrypt**, protegendo contra vazamentos de dados. O bcrypt gera um valor aleatório para cada senha automaticamente antes de aplicar o hash. Isso impede ataques com tabelas pré-calculadas, pois até senhas iguais terão hashes diferentes.
+* **Autenticação:** A aplicação utiliza **JWT (JSON Web Token)** para autenticar os usuários e proteger as rotas sensíveis. Com isso, é possível garantir que apenas usuários autorizados tenham acesso a determinadas funcionalidades, sem depender de sessões de servidor, o que combina bem com APIs REST.
+
+**Armazenamento de senhas**: As senhas são protegidas utilizando um hash simples com SHA-256, uma abordagem leve e suficiente para o nível de segurança esperado na aplicação. Isso garante que as senhas não sejam armazenadas em texto puro e evita exposições básicas em caso de vazamento do banco de dados.
 
 ## Características do Projeto
-- Baixo acoplamento: Por conta da escolha do padrão arquitetural em camadas e da stack, o projeto apresentará baixo acoplamento entre as camadas e os componentes principais, mesmo sendo uma aplicação monolítica. Porém se a aplicação crescer muito, o estilo monolítico pode tornar o acoplamento mais evidente.
-- Escalabilidade: Por conta da escolha do padrão arquitetural em camadas e da stack, a escalabilidade do projeto será simples até certo ponto. Mas embora a arquitetura monolítica seja mais simples no início, ela possui seus limites e pode se tornar difícil de manter e escalar à medida que o sistema cresce. Com o tempo, o monolito pode se tornar complexo e difícil de gerenciar, especialmente em termos de testes e atualizações de funcionalidades. Em um monólito, se uma parte crítica do sistema começar a falhar ou precisar de manutenção, isso pode afetar o sistema inteiro, mesmo sendo separado em camadas.
-- Escolha da stack: A combinação de tecnologias foi selecionada por ser **simples**, **consolidada no mercado** e com **documentação abrangente** na internet, adequada ao objetivo do projeto.
 
+* **Baixo acoplamento:** Mesmo com uma arquitetura monolítica, a estrutura em camadas adotada no projeto contribui para um baixo acoplamento entre os componentes. Isso facilita a manutenção e evolução do sistema. No entanto, se a aplicação crescer muito, o estilo monolítico pode acabar dificultando a organização e o isolamento de funcionalidades.
+
+* **Escalabilidade:** A organização em camadas permite escalar a aplicação de forma relativamente tranquila no início. Contudo, à medida que o sistema cresce, o monolito pode se tornar mais difícil de manter. A adição de novas funcionalidades, testes e atualizações podem impactar partes do sistema que, idealmente, deveriam ser independentes.
+
+* **Escolha da stack:** A stack foi escolhida por ser **conhecida**, **estável no mercado** e **bem documentada**. O uso de Java com Spring Boot oferece uma base sólida para projetos robustos, com uma comunidade ativa e diversas bibliotecas prontas para uso, o que facilita bastante o desenvolvimento.
 ---
 # 🎨 Style Guide 
 
