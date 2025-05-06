@@ -253,7 +253,9 @@ O MySQL é uma boa escolha pelos seguintes aspectos:
   - 3.2 Validação de usuário
   
     Email: Não permitir o cadastro de emails inválidos, inexistentes ou já cadastrados.
+    
     Médicos: Devem possuir um CRM válido cadastrado.
+    
     Senha: Senha do usuário deve possuir pelo menos 9 caracteres, uma letra maiúscula, um caractere especial e um número.
 
 - **4. Segurança**
