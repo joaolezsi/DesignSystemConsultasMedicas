@@ -6,6 +6,7 @@
 - Lucas de Carvalho Barbosa
 - João L.
 - Wanessa Dias
+- Filipe Faria Melo
 
 
 ## 🏗️ Arquitetura e Governança
