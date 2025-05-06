@@ -231,7 +231,7 @@ As cores principais da marca (**verde `#007E85`** e **vermelho `#EE0202`**) **n√
 
 ## Camada de Dados
 
-![Diagrama](./docs/diagrama.jpg)
+![Diagrama](./docs/diagrama01.jpg)
 
 O MySQL √© uma boa escolha pelos seguintes aspectos:
 
