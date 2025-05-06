@@ -240,7 +240,7 @@ O MySQL é uma boa escolha pelos seguintes aspectos:
   
     - Utilize chaves estrangeiras (FOREIGN KEY) para garantir a integridade referencial.
  
-    - Para representar uma tabela que é a generalização de outras tabelas especializadas, utilize uma chave estrangeira (referindo-se a tabela de generalização) nas tabelas de especializadas. (Exemplo: Tabela usuário é uma generaliização das tabelas Pacientes, Médicos e administradores. Estas tabelas possuem a FK id_usuário como identificador)
+    - Para representar uma tabela que é a generalização de outras tabelas, utilize uma chave estrangeira (referindo-se a tabela de generalização) nas tabelas especializadas. (Exemplo: Tabela usuário é uma generalização das tabelas Pacientes, Médicos e administradores. Estas tabelas possuem a FK id_usuario como identificador)
       
 - **3. Regras de Negócio na Camada de Persistência**
   
@@ -263,7 +263,7 @@ O MySQL é uma boa escolha pelos seguintes aspectos:
     - Garantir a criptografia de senhas e dados sensíveis.
   
 
-## Prefixos Padrões para Nomes de Colunas em Banco de Dados
+## Boas Práticas: Prefixos padrões para nomes de colunas no banco de dados
 
 | Tipo de Dado         | Prefixo Sugerido | Exemplo              | Descrição                                     |
 |----------------------|------------------|----------------------|-----------------------------------------------|
@@ -284,10 +284,10 @@ O MySQL é uma boa escolha pelos seguintes aspectos:
 | URL / Caminho        | `url_`           | `url_foto_perfil`   | Endereço de arquivo, imagem, etc.              |
 | Nome de arquivo      | `arq_`           | `arq_documento`      | Nome do arquivo ou mídia                      |
 
-## Observações, limitações e pontos fracos a se levar em consideração:
+## Observações, limitações e pontos fracos a levar em consideração:
 
 | Item                              | Situação no MySQL                                     | Melhorias implementáveis                                                                                                  |
 |-----------------------------------|-------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
-| Criptografia em repouso (at rest) | Só disponível nativamente no MySQL Enterprise         | Possível investimento monetário no MySQL Enterprise.                                                                      |
+| Criptografia em repouso (at rest) | Só disponível no MySQL Enterprise                     | Possível investimento monetário no MySQL Enterprise.                                                                      |
 | Auditoria detalhada               | Não nativo                                            | Audit Plugins de terceiros. Ex: McAfee Audit Plugin Registra comandos SQL, logins, alterações de dados.                   |
 | Controle de acesso por linha      | Não nativo                                            | Pode ser feita com views e triggers que são acessadas pela aplicação ao invés das tabelas diretamente.                    |
