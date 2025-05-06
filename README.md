@@ -214,7 +214,7 @@ As cores principais da marca (**verde `#007E85`** e **vermelho `#EE0202`**) **n√
 
 ---
 
-## Banco de Dados
+## Camada de Dados
 
 ![Diagrama](./docs/diagrama.jpg)
 
