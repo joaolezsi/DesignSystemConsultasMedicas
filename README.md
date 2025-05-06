@@ -32,6 +32,8 @@ Isso torna o código mais **legível**, facilita **manutenções** e **ampliaç�
 Essa abordagem foi escolhida levando em consideração que o projeto é de **pequeno porte** e **sem previsão de integração com outras ferramentas**.  
 Dessa forma, oferece **simplicidade**, **baixo custo inicial** e **eficiência** para um projeto que **não requer a complexidade** de arquiteturas distribuídas.
 
+![Modelo Arquitetural](https://github.com/user-attachments/assets/30894d35-3582-4a77-8d51-f7f2526a076a)
+
 ---
 
 ### Governança do Projeto
