@@ -234,12 +234,14 @@ O MySQL é uma boa escolha pelos seguintes aspectos:
 
 - **Tabelas e Colunas**
 
-    - Usar underscore "_" para os nomes das tabelas e colunas. (Exemplo: usuarios, consultas, id_medico, id_paciente.)
+    - Usar underscore "_" para os nomes das tabelas e colunas. (Exemplo: id_medico, id_paciente, data_hora, etc.)
 
 - **2. Relacionamentos**
   
-    - Utilize chaves estrangeiras (FOREIGN KEY) para garantir a integridade referencial e para representar generalizações.
-
+    - Utilize chaves estrangeiras (FOREIGN KEY) para garantir a integridade referencial.
+ 
+    - Para representar uma tabela que é a generalização de outras tabelas especializadas, utilize uma chave estrangeira (referindo-se a tabela de generalização) nas tabelas de especializadas. (Exemplo: Tabela usuário é uma generaliização das tabelas Pacientes, Médicos e administradores. Estas tabelas possuem a FK id_usuário como identificador)
+      
 - **3. Regras de Negócio na Camada de Persistência**
   
   - 3.1 Validação de Consultas
@@ -250,13 +252,15 @@ O MySQL é uma boa escolha pelos seguintes aspectos:
 
   - 3.2 Validação de usuário
   
-    Email: Não permitir o cadastro de emails inválidos ou inexistentes. 
+    Email: Não permitir o cadastro de emails inválidos, inexistentes ou já cadastrados.
+    Médicos: Devem possuir um CRM válido cadastrado.
+    Senha: Senha do usuário deve possuir pelo menos 9 caracteres, uma letra maiúscula, um caractere especial e um número.
 
 - **4. Segurança**
 
     - Garantir o controle de acesso e perfis (paciente, médico, administrador).
 
-    - Garantir a criptografia robusta de senhas e dados sensíveis.
+    - Garantir a criptografia de senhas e dados sensíveis.
   
 
 ## Prefixos Padrões para Nomes de Colunas em Banco de Dados
